@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Queue Cure '26 🏥
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A real-time clinic queue management system that eliminates paper tokens and waiting room chaos.
 
-## Available Scripts
+## 🔗 Live Demo
+[https://queue-cure-26-qu1e.onrender.com](https://queue-cure-26-qu1e.onrender.com)
 
-In the project directory, you can run:
+## 🎯 Problem Statement
+76% of India's 1.5 million clinics still run on paper token slips. Patients wait 2–3 hours with zero visibility. Doctors have no dashboard. Receptionists manage everything from memory.
 
-### `npm start`
+## ✅ Solution
+Queue Cure is a full-stack real-time queue management system with:
+- **Receptionist View** — Add patients, call next token, set consultation time
+- **Patient Waiting Room View** — Live token display, estimated wait time, queue position
+- **QR Self Check-in** — Patients scan QR and add themselves to the queue
+- **Analytics Dashboard** — Doctors see patients seen, avg consultation time, efficiency score
+- **Multi-language Support** — English, Hindi, Tamil
+- **Sound Alerts** — Chime plays when next token is called
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚡ Tech Stack
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js |
+| Backend | Node.js + Express |
+| Real-time | Socket.io |
+| Deployment | Render |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 How to Run Locally
 
-### `npm test`
+### Prerequisites
+- Node.js v18+
+- npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps
+```bash
+# Clone the repo
+git clone https://github.com/shalini2006790/queue-cure-26.git
+cd queue-cure-26
 
-### `npm run build`
+# Install dependencies
+npm install --include=dev
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Start the server
+node server.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open [http://localhost:4000](http://localhost:4000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
+## 🔄 Socket Events
+| Event | Direction | Description |
+|-------|-----------|-------------|
+| `add_patient` | Client → Server | Add new patient to queue |
+| `call_next` | Client → Server | Call next patient token |
+| `remove_patient` | Client → Server | Remove patient from queue |
+| `update_avg_time` | Client → Server | Update consultation time |
+| `reset_queue` | Client → Server | Reset entire queue |
+| `state_update` | Server → All Clients | Broadcast updated queue state |
 
-### `npm run eject`
+## 🧠 Key Features
+- **AI Smart Wait Prediction** — Uses rolling average of actual consultation times instead of fixed estimate
+- **Live sync** — Both screens update instantly via WebSockets, no refresh needed
+- **Concurrency safe** — Server holds single source of truth, all clients receive same state
+- **Mobile responsive** — Works on phone, tablet, and TV screen
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👩‍💻 Built By
+Shalini — Queue Cure '26 Hackathon (Wooble)
