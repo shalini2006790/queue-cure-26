@@ -5,7 +5,9 @@ import Patient from './components/Patient';
 import QRCheckin from './components/QRCheckin';
 import Analytics from './components/Analytics';
 
-const socket = io(window.location.origin);
+const socket = io(window.location.origin, {
+  transports: ['websocket', 'polling']
+});
 
 export default function App() {
   const [state, setState] = useState({
